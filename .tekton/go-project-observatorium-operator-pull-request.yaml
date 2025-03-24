@@ -183,7 +183,7 @@ spec:
         - name: name
           value: prefetch-dependencies-oci-ta
         - name: bundle
-          value: quay.io/fmudry-konflux/prefetch-deps-test:0.2
+          value: quay.io/fmudry-konflux/prefetch-deps-test:0.3-git-test
         - name: kind
           value: task
         resolver: bundles
