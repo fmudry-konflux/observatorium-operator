@@ -28,7 +28,11 @@ spec:
   - name: image-expires-after
     value: 5d
   - name: dockerfile
-    value: Dockerfile
+    value: Containerfile.operator
+  - name: build-source-image
+    value: "true"
+  - name: path-context
+    value: .
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while maintaining trust after pipeline customization.
@@ -183,7 +187,7 @@ spec:
         - name: name
           value: prefetch-dependencies-oci-ta
         - name: bundle
-          value: quay.io/fmudry-konflux/prefetch-deps-test:0.6-without-changes
+          value: quay.io/fmudry-konflux/prefetch-deps-test:0.5-git-test
         - name: kind
           value: task
         resolver: bundles
